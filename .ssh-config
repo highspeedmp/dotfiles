@@ -2,4 +2,4 @@ Host github.com
     HostName github.com
     User highspeedmp
     PreferredAuthentications publickey
-    IdentityFile $HOME/.ssh/highspeedmp-GitHub
+    IdentityFile ~/.ssh/highspeedmp-GitHub
