@@ -4,7 +4,7 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-
+EDITOR=vim
 # User specific aliases and functions
 
 PATH="/home/MERIT/mpromenc/perl5/bin${PATH+:}${PATH}"; export PATH;
