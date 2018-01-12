@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'joshdick/onedark.vim'
+Plug 'rodjek/vim-puppet'
+Plug 'jiangmiao/auto-pairs'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 "Plug 'junegunn/vim-easy-align'
 
