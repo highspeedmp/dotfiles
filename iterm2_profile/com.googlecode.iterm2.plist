@@ -44597,13 +44597,15 @@
 	<key>NSWindow Frame com.apple.typography_panel_FiraCode-Retina</key>
 	<string>-1574 501 260 176 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1881 651 825 527 -1920 0 1920 1178 </string>
+	<string>-1881 645 825 527 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-756 0 745 502 -1920 0 1920 1178 </string>
+	<string>-825 0 825 527 -1920 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
+			<true/>
+			<key>ASCII Ligatures</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
