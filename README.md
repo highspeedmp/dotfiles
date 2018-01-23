@@ -20,10 +20,10 @@ vi ~/.vimrc
 
 
 ## OSX
-#####Autoload iTerm2 settings from dotiles
+### Autoload iTerm2 settings from dotiles
 
-#### Specify the preferences directory
+##### Specify the preferences directory
 >defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2_profile"  
 
-#### Tell iTerm2 to use the custom preferences in the directory
+##### Tell iTerm2 to use the custom preferences in the directory
 >defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
