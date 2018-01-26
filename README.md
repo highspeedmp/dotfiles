@@ -27,3 +27,7 @@ vi ~/.vimrc
 
 ##### Tell iTerm2 to use the custom preferences in the directory
 >defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+#### Other OSX tips and tricks
+>You can fix this problem by deleting the following plist file, which will reset all your keyboard shortcuts:  
+sudo rm ~/Library/Preferences/com.apple.symbolichotkeys.plist  
