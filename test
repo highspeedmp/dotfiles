@@ -35,19 +35,13 @@ fi
 
 if [ "$system_type" = "Linux" ]; then
 
-  apt install -y git curl
+  apt install -y git
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
-
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-  echo 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu xenial main' > /etc/apt/sources.list
-  apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-  add-apt-repository multiverse
   apt update
   wget -O atom.deb https://atom.io/download/deb
   dpkg -i atom.deb
-  apt install -f -y vim google-chrome-stable atom dropbox python-gpgme steam
+  apt install -f -y vim google-chrome-stable dropbox python-gpgme steam
 fi
 
 
