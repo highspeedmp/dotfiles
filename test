@@ -41,7 +41,8 @@ if [ "$system_type" = "Linux" ]; then
   apt update
   wget -O atom.deb https://atom.io/download/deb
   dpkg -i atom.deb
-  apt install -f -y vim google-chrome-stable dropbox python-gpgme steam
+  apt install -f
+  apt install -y vim steam
 fi
 
 
