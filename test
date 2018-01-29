@@ -35,7 +35,7 @@ fi
 
 if [ "$system_type" = "Linux" ]; then
 
-  apt install git
+  apt install -y git
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
 
@@ -47,7 +47,7 @@ if [ "$system_type" = "Linux" ]; then
   apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
   add-apt-repository multiverse
   apt update
-  apt install git firefox google-chrome-stable atom dropbox python-gpgme steam
+  apt install -y google-chrome-stable atom dropbox python-gpgme steam
 fi
 
 
