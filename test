@@ -35,13 +35,13 @@ fi
 
 if [ "$system_type" = "Linux" ]; then
 
-  apt install -y git
+  apt install -y git curl
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   apt update
   wget -O atom.deb https://atom.io/download/deb
   dpkg -i atom.deb
-  apt install -f
+  apt install -y -f
   apt install -y vim steam
 fi
 
