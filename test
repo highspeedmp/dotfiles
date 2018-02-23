@@ -1,0 +1,70 @@
+#!/bin/bash
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Darwin" ]; then
+  # install homebrew if it's missing
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+  brew install git
+  cd ~
+  git clone https://github.com/highspeedmp/dotfiles.git
+
+  rm -rf ~/.Brewfile
+  ln -s ~/dotfiles/.Brewfile ~/.Brewfile
+
+  rm -rf ~/.inputrc
+  ln -s ~/dotfiles/.inputrc ~/.inputrc
+
+  rm -rf ~/.iterm2
+  ln -s ~/dotfiles/.iterm2 ~/.iterm2
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating homebrew bundle"
+    brew bundle --global
+  fi
+
+  if [ -d "$HOME/.iterm2" ]; then
+    echo "Setting iTerm preference folder"
+    defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
+    defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+  fi
+fi
+
+if [ "$system_type" = "Linux" ]; then
+
+  apt install -y git curl
+  cd ~
+  git clone https://github.com/highspeedmp/dotfiles.git
+  apt update
+  wget -O atom.deb https://atom.io/download/deb
+  dpkg -i atom.deb
+  apt install -y -f
+  apt install -y vim steam
+fi
+
+
+
+# Shared config
+
+rm -rf ~/.ssh/config
+ln -s ~/dotfiles/.ssh-config ~/.ssh/config
+
+rm -rf ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+
+rm -rf ~/.vimrc
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+
+rm -rf ~/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+mkdir ~/.vim
+mkdir ~/.vim/plugged
+mkdir ~/.vim/autoload
+
+if command -v vim >/dev/null 2>&1; then
+  vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+fi
