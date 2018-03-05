@@ -5,6 +5,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+if [ -f ~/.git-completion.bash ]; then 
+   source ~/.git-completion.bash
+fi
+
 EDITOR=vim
 
 # Colors

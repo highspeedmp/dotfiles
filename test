@@ -34,33 +34,21 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 if [ "$system_type" = "Linux" ]; then
-
-  apt install -y git curl
+  apt install -y git curl vim
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
-  apt update
-  wget -O atom.deb https://atom.io/download/deb
-  dpkg -i atom.deb
-  apt install -y -f
-  apt install -y vim steam
 fi
 
+# Start of Shared config
 
+# create symlinks for dot files
+dotfiles=(bashrc vimrc tmux.conf git-completion ssh/config)
+for i in ${dotfiles[@]}; do
+  rm -rf ~/.${i}
+  ln -s ~/dotfiles/.${i} ~/.${i}
+done
 
-# Shared config
-
-rm -rf ~/.ssh/config
-ln -s ~/dotfiles/.ssh-config ~/.ssh/config
-
-rm -rf ~/.bashrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-
-rm -rf ~/.vimrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-
-rm -rf ~/.tmux.conf
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-
+# vim-plug
 mkdir ~/.vim
 mkdir ~/.vim/plugged
 mkdir ~/.vim/autoload

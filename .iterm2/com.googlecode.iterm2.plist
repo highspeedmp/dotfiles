@@ -44552,7 +44552,7 @@
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>1 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm2_profile</string>
+	<string>~/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -44598,13 +44598,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1651 126 606 469 -1920 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1107 666 918 512 -1920 0 1920 1178 </string>
+	<string>1083 648 796 473 0 0 1920 1178 </string>
 	<key>NSWindow Frame com.apple.typography_panel_FiraCode-Retina</key>
 	<string>-1574 501 260 176 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>39 23 1641 1005 0 0 1680 1028 </string>
+	<string>38 0 1402 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-825 0 825 527 -1920 0 1920 1178 </string>
+	<string>-1658 126 1528 901 -1920 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -46108,7 +46108,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mpromenc/dotfiles/iterm2_profile</string>
+	<string>/Users/mpromenc/dotfiles/.iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -46118,10 +46118,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-26T12:51:19Z</date>
+	<date>2018-02-06T02:36:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
+	<true/>
+	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<false/>
