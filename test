@@ -1,7 +1,7 @@
 #!/bin/bash
 
 system_type=$(uname -s)
-dot_backup="~/.olddotfiles"
+dot_backup=~/.olddotfiles
 
 mkdir $dot_backup
 
