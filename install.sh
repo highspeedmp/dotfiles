@@ -69,9 +69,11 @@ echo "Some additional configuration is still requried, but we are almost there"
 echo "1) Safely transfer your github ssh keys (.ssh/highspeedmp-GitHub) to this new setup, then update the github remote url"
 echo "      cd ~/dotfiles && git remote set-url origin git@github.com:highspeedmp/dotfiles.git"
 echo ""
-
+echo ""
 if [ "$system_type" = "Linux" ]; then
     echo "You also need to configure terminal colors: this will close the terminal!"
     echo "      . ~/dotfiles/one-dark.sh"
-    echo "If this gives you an error you need to create a new blank profile in gnome-terminal first"
+    echo ""
+    echo "If this gives you an error you need to create a new blank rofile and give it a name in gnome-terminal first"
+    echo "From there you'll also need to configure the default profole and install the preferred font (firaMono)"
 fi
