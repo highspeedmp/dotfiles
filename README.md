@@ -21,5 +21,3 @@ You'll need to create a new gnome-terminal profile and name it before you can pr
 ```
 Then you'll need to configure the default profile and install the preferred font (included in this repo)
 ## OSX
-You can fix this problem by deleting the following plist file, which will reset all your keyboard shortcuts:  
-```sudo rm ~/Library/Preferences/com.apple.symbolichotkeys.plist```
