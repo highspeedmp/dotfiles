@@ -1,4 +1,4 @@
-#OSX tips
+## OSX
 
 You can fix problems with keyboard  by deleting the following plist file, which will reset all your keyboard shortcuts:
 
