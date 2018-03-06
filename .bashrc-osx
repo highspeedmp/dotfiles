@@ -10,5 +10,4 @@ EDITOR=vim
 
 # Colors
 alias grep='grep --color=always'
-alias ls='ls --color=auto'
 alias weather="curl -s wttr.in/Ann\ Arbor"

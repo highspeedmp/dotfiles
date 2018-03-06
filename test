@@ -20,6 +20,9 @@ if [ "$system_type" = "Darwin" ]; then
 
   rm -rf ~/.iterm2
   ln -s ~/dotfiles/.iterm2 ~/.iterm2
+  
+  rm -rf ~/.bashrc
+  ln -s ~/dotfiles/.bashrc-osx ~/.bashrc
 
   if [ -f "$HOME/.Brewfile" ]; then
     echo "Updating homebrew bundle"
@@ -37,12 +40,16 @@ if [ "$system_type" = "Linux" ]; then
   apt install -y git curl vim
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
+
+  rm -rf ~/.bashrc
+  ln -s ~/dotfiles/.bashrc ~/.bashrc
+
 fi
 
 # Start of Shared config
 
 # create symlinks for dot files
-dotfiles=(bashrc vimrc tmux.conf git-completion ssh/config)
+dotfiles=(vimrc tmux.conf git-completion ssh/config)
 for i in ${dotfiles[@]}; do
   rm -rf ~/.${i}
   ln -s ~/dotfiles/.${i} ~/.${i}
@@ -55,4 +62,13 @@ mkdir ~/.vim/autoload
 
 if command -v vim >/dev/null 2>&1; then
   vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+fi
+
+echo "Some additional configuration is still requried, but we are almost there"
+echo "1) Safely transfer your github ssh keys (.ssh/highspeedmp-GitHub) to this new setup, then update the github remote url"
+echo "      cd ~/dotfiles && git remote set-url origin git@github.com:highspeedmp/dotfiles.git"
+
+if [ "$system_type" = "Linux" ]; then
+    echo "You also need to configure terminal colors: this will close the terminal!"
+    echo "      . ~/dotfiles/one-dark.sh"
 fi
