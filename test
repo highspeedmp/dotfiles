@@ -1,6 +1,9 @@
 #!/bin/bash
 
 system_type=$(uname -s)
+dot_backup="~/.olddotfiles"
+
+mkdir $dot_backup
 
 if [ "$system_type" = "Darwin" ]; then
   # install homebrew if it's missing
@@ -12,16 +15,13 @@ if [ "$system_type" = "Darwin" ]; then
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
 
-  rm -rf ~/.Brewfile
-  ln -s ~/dotfiles/.Brewfile ~/.Brewfile
-
-  rm -rf ~/.inputrc
-  ln -s ~/dotfiles/.inputrc ~/.inputrc
-
-  rm -rf ~/.iterm2
-  ln -s ~/dotfiles/.iterm2 ~/.iterm2
+dotfiles=(Brewfile inputrc iterm2)
+  for i in ${dotfiles[@]}; do
+    mv ~/.${i} $dot_backup/.${i}
+    ln -s ~/dotfiles/.${i} ~/.${i}
+  done
   
-  rm -rf ~/.bashrc
+  mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc-osx ~/.bashrc
 
   if [ -f "$HOME/.Brewfile" ]; then
@@ -37,11 +37,11 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt install -y git curl vim gconf2
+  sudo apt install -y git curl vim gconf2 fonts-firacode tmux 
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
-
-  rm -rf ~/.bashrc
+    
+  mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc ~/.bashrc
 
 fi
@@ -49,9 +49,10 @@ fi
 # Start of Shared config
 
 # create symlinks for dot files
+
 dotfiles=(vimrc tmux.conf git-completion ssh/config)
 for i in ${dotfiles[@]}; do
-  rm -rf ~/.${i}
+  mv ~/.${i} $dot_backup/.${i}
   ln -s ~/dotfiles/.${i} ~/.${i}
 done
 
