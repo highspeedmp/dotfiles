@@ -17,7 +17,7 @@ if [ "$system_type" = "Darwin" ]; then
 
 dotfiles=(Brewfile inputrc iterm2)
   for i in ${dotfiles[@]}; do
-    mv ~/.${i} $dot_backup/.${i}
+    mv ~/.${i} $dot_backup/.${i//\//_}
     ln -s ~/dotfiles/.${i} ~/.${i}
   done
   
@@ -52,7 +52,7 @@ fi
 
 dotfiles=(vimrc tmux.conf git-completion ssh/config)
 for i in ${dotfiles[@]}; do
-  mv ~/.${i} $dot_backup/.${i}
+  mv ~/.${i} $dot_backup/.${i//\//_}
   ln -s ~/dotfiles/.${i} ~/.${i}
 done
 
