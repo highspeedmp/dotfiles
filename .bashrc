@@ -10,6 +10,5 @@ EDITOR=vim
 
 # Colors
 alias grep='grep --color=always'
-alias ls='ls --color=auto'
 alias weather="curl -s wttr.in/Ann\ Arbor"
 alias genpass='openssl rand -base64 $1'

@@ -44605,15 +44605,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1251 588 620 392 -1920 0 1920 1177 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>-1651 126 606 469 -1920 0 1920 1177 </string>
+	<string>-1651 126 606 469 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>-951 705 796 473 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame com.apple.typography_panel_FiraCode-Retina</key>
 	<string>-1574 501 260 176 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1882 23 1882 1155 -1920 0 1920 1178 </string>
+	<string>39 281 1265 747 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1882 0 1882 1178 -1920 0 1920 1178 </string>
+	<string>-1881 23 1882 1155 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>331 40 825 527 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
@@ -45411,7 +45411,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-05T14:10:35Z</date>
+	<date>2018-04-12T13:45:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
