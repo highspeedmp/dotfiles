@@ -40,17 +40,18 @@ if [ "$system_type" = "Linux" ]; then
   sudo apt install -y git curl vim gconf2 fonts-firacode tmux 
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
-    
+  
   mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc ~/.bashrc
-
 fi
 
 # Start of Shared config
 
 # create symlinks for dot files
+mkdir ~/.ssh
+ln -s ~/dotfiles/.ssh-config ~/.ssh/config
 
-dotfiles=(vimrc tmux.conf git-completion ssh/config)
+dotfiles=(vimrc tmux.conf git-completion)
 for i in ${dotfiles[@]}; do
   mv ~/.${i} $dot_backup/.${i//\//_}
   ln -s ~/dotfiles/.${i} ~/.${i}
