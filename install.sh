@@ -56,6 +56,8 @@ for i in ${dotfiles[@]}; do
   mv ~/.${i} $dot_backup/.${i//\//_}
   ln -s ~/dotfiles/.${i} ~/.${i}
 done
+# try out liquid
+git clone https://github.com/nojhan/liquidprompt.git
 
 # vim-plug
 mkdir ~/.vim
