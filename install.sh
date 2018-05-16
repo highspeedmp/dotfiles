@@ -51,7 +51,7 @@ fi
 mkdir ~/.ssh
 ln -s ~/dotfiles/.ssh-config ~/.ssh/config
 
-dotfiles=(vimrc tmux.conf git-completion)
+dotfiles=(vimrc tmux.conf git-completion liquid.ps1 liquidpromptrc)
 for i in ${dotfiles[@]}; do
   mv ~/.${i} $dot_backup/.${i//\//_}
   ln -s ~/dotfiles/.${i} ~/.${i}
