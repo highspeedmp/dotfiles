@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 [[ -s "~/.git-completion.sh" ]] && source ~/.git-completion.bash
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i*  ]] && source ~/liquidprompt/liquidprompt
+
 
 EDITOR=vim
 
