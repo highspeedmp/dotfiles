@@ -37,7 +37,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt install -y git curl vim gconf2 fonts-firacode tmux 
+  sudo apt install -y git curl vim gconf2 fonts-firacode tmux python3-pip
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
@@ -59,6 +59,7 @@ done
 # try out liquid
 git clone https://github.com/nojhan/liquidprompt.git
 
+sudo pip3 install pywal
 # vim-plug
 mkdir ~/.vim
 mkdir ~/.vim/plugged

@@ -19,7 +19,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'joshdick/onedark.vim'
 Plug 'rodjek/vim-puppet'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
-colorscheme onedark
-
+" colorscheme onedark
+colorscheme wal
 
