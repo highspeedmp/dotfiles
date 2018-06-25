@@ -68,6 +68,8 @@ if [ "$is_desktop" ]; then
   
   mv ~/.vimrc $dot_backup/.vimrc
   ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
+
+  chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
 fi
 # vim-plug
 mkdir ~/.vim
