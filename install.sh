@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Lazy, but any argument will set desktop to true to trigger some linux desktop specific customziations
-is_desktop=$1
+echo "Is this a Linux Desktop? Type Y, otherwise type something else"
+read is_desktop
 system_type=$(uname -s)
 dot_backup=~/.olddotfiles
 
@@ -60,7 +61,7 @@ for i in ${dotfiles[@]}; do
 done
 
 # Linux desktop specific configuration 
-if [ "$is_desktop" ]; then
+if [ "$is_desktop" = "Y" | "y" ]; then
   sudo apt install python3-pip
   sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
