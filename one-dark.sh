@@ -19,7 +19,7 @@ create_new_profile() {
 }
 
 # Create profile
-id=$(create_new_profile TEST)
+create_new_profile TEST
 
 
 # ONE DARK
