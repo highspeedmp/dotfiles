@@ -44603,15 +44603,15 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>-1575 736 735 382 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-1251 588 620 392 -1920 0 1920 1177 </string>
+	<string>-1251 589 620 392 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1651 126 606 469 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-951 705 796 473 -1920 0 1920 1178 </string>
+	<string>-951 675 937 464 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame com.apple.typography_panel_FiraCode-Retina</key>
 	<string>-1574 501 260 176 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>39 281 1265 747 0 0 1680 1028 </string>
+	<string>116 916 770 67 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-1881 23 1882 1155 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -45411,13 +45411,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-12T13:45:05Z</date>
+	<date>2018-05-21T13:18:09Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
@@ -45431,7 +45431,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
