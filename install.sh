@@ -73,9 +73,9 @@ if [ "$is_desktop" = "Y" ]; then
 
   chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
   cd ~ && wget https://github.com/themix-project/oomox/releases/download/1.6.0/oomox_1.6.0.deb
-  cd ~ sudo dpkg -i oomox_1.6.0.deb
+  cd ~ && sudo dpkg -i oomox_1.6.0.deb
   sudo apt -y install -f 
-  wal -q -g -i ~/dotfiles/desktop.jpg
+  wal -g -i ~/dotfiles/desktop.jpg
   gsettings reset org.gnome.desktop.interface gtk-theme
   gsettings set org.gnome.desktop.interface gtk-theme wal
 fi
