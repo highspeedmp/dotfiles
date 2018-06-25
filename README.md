@@ -5,6 +5,10 @@ Pull down the installer file then run it
 ```
 cd ~ && wget https://raw.githubusercontent.com/highspeedmp/dotfiles/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh
 ```
+Fancy version for linux desktops that restarts applications and looks cool
+```
+cd ~ && wget https://raw.githubusercontent.com/highspeedmp/dotfiles/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh && gnome-terminal && exit
+```
 ### git
 Safely transfer your github ssh keys (.ssh/highspeedmp-GitHub) to this new setup, then update the github remote url
 ```
