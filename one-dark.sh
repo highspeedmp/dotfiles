@@ -57,13 +57,11 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         DEFAULT_KEY="$BASE_KEY_NEW/:$DEFAULT_SLUG"
         PROFILE_KEY="$BASE_KEY_NEW/:$PROFILE_SLUG"
-
         # copy existing settings from default profile
         $DCONF dump "$DEFAULT_KEY/" | $DCONF load "$PROFILE_KEY/"
 
         # add new copy to list of profiles
         dlist_append $BASE_KEY_NEW/list "$PROFILE_SLUG"
-
         # update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
         dset palette "['#000000', '#E06C75', '#98c379', '#d19a66', '#61aeee', '#c678dd', '#56b6c2', '#abb2bf', '#5c6370', '#e06c75', '#98c379', '#d19a66', '#62afee', '#c678dd', '#56b6c2', '#ffffff']"
@@ -73,7 +71,9 @@ if which "$DCONF" > /dev/null 2>&1; then
         dset bold-color-same-as-fg "true"
         dset use-theme-colors "false"
         dset use-theme-background "false"
-
+        dset font "'Fira Code weight=450 14'"
+        # Set the new theme as the default
+        dconf write /org/gnome/terminal/legacy/profiles:/default "'$PROFILE_SLUG'"
         unset PROFILE_NAME
         unset PROFILE_SLUG
         unset DCONF

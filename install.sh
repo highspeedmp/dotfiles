@@ -60,7 +60,6 @@ done
 git clone https://github.com/nojhan/liquidprompt.git
 
 sudo pip3 install pywal
-
 # vim-plug
 mkdir ~/.vim
 mkdir ~/.vim/plugged
