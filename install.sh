@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Lazy, but any argument will set desktop to true to trigger some linux desktop specific customziations
+is_desktop=$1
 system_type=$(uname -s)
 dot_backup=~/.olddotfiles
 
@@ -37,7 +39,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt install -y git curl vim gconf2 fonts-firacode tmux python3-pip
+  sudo apt install -y git curl vim gconf2 fonts-firacode tmux
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
@@ -56,10 +58,17 @@ for i in ${dotfiles[@]}; do
   mv ~/.${i} $dot_backup/.${i//\//_}
   ln -s ~/dotfiles/.${i} ~/.${i}
 done
-# try out liquid
-git clone https://github.com/nojhan/liquidprompt.git
 
-sudo pip3 install pywal
+# Linux desktop specific configuration 
+if [ "$is_desktop" ]; then
+  sudo apt install python3-pip
+  sudo pip3 install pywal
+  mv ~/.bashrc $dot_backup/.bashrc
+  ln -s ~/dotfiles/.bashrc-linux-desktop ~/.bashrc
+  
+  mv ~/.vimrc $dot_backup/.vimrc
+  ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
+fi
 # vim-plug
 mkdir ~/.vim
 mkdir ~/.vim/plugged
@@ -69,6 +78,8 @@ if command -v vim >/dev/null 2>&1; then
   vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
 fi
 
+# liquid prompt
+git clone https://github.com/nojhan/liquidprompt.git
 echo ""
 echo "Some additional configuration is still requried, view the README.md file in the ~/dotfiles directory"
 echo ""
