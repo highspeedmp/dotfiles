@@ -40,7 +40,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt install -y git curl vim gconf2 fonts-firacode tmux
+  sudo apt install -y git curl vim tmux
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
@@ -63,7 +63,7 @@ done
 # Linux desktop specific configuration 
 
 if [ "$is_desktop" = "Y" ]; then
-  sudo apt -y install python3-pip
+  sudo apt -y install python3-pip gconf2 fonts-firacode
   sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc-linux-desktop ~/.bashrc

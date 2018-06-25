@@ -13,9 +13,8 @@ create_new_profile() {
     [ -z "$profile_ids_old" ] && local lb="["  # if there's no `list` key
     [ ${#profile_ids[@]} -gt 0 ] && local delimiter=,  # if the list is empty
     dconf write $dconfdir/list \
-        "${profile_ids_old}${delimiter} '$profile_id']"
-    dconf write "$dconfdir/:$profile_id"/visible-name "'$profile_name'"
-    echo $profile_id
+        "${profile_ids_old}${delimiter} '$profile_id']" > /dev/null 2>&1
+    dconf write "$dconfdir/:$profile_id"/visible-name "'$profile_name'" > /dev/null 2>&1
 }
 
 # Create profile
