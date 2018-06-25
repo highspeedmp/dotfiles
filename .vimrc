@@ -21,6 +21,5 @@ Plug 'rodjek/vim-puppet'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dylanaraps/wal.vim'
 call plug#end()
-" colorscheme onedark
-colorscheme wal
+colorscheme onedark
 
