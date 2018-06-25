@@ -61,7 +61,8 @@ for i in ${dotfiles[@]}; do
 done
 
 # Linux desktop specific configuration 
-if [ "$is_desktop" = "Y" | "y" ]; then
+
+if [ "$is_desktop" = "Y" ]; then
   sudo apt install python3-pip
   sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
