@@ -1,0 +1,19 @@
+# Install google chrome - sign in
+
+# need to kinit 
+sudo apt install krb5-user
+sudo apt install -y libpam-krb5
+
+# configure browsers for SSO
+# This may not persist through software updates!
+# sudo vi /usr/share/applications/google-chrome.desktop
+# Find this line:
+# 	Exec=/usr/bin/google-chrome-stable %U 
+# Add the whitelist flag:
+# Exec=/usr/bin/google-chrome-stable %U --auth-server-whitelist="*merit.edu"
+#
+#
+#
+# Add to /etc/pam.d/common-auth
+auth    required                        pam_unix.so
+auth    optional                        pam_krb5.so use_first_pass
