@@ -1,8 +1,10 @@
-# Install google chrome - sign in
+# Install google chrome
 
 # need to kinit 
-sudo apt install krb5-user
+sudo apt install -y krb5-user libpam-krb5
 sudo apt install -y libpam-krb5
+
+default realm = MERIT.EDU
 
 # configure browsers for SSO
 # This may not persist through software updates!
@@ -10,10 +12,9 @@ sudo apt install -y libpam-krb5
 # Find this line:
 # 	Exec=/usr/bin/google-chrome-stable %U 
 # Add the whitelist flag:
-# Exec=/usr/bin/google-chrome-stable %U --auth-server-whitelist="*merit.edu"
+# 	Exec=/usr/bin/google-chrome-stable %U --auth-server-whitelist="*merit.edu"
 #
-#
-#
+# Auto generate krb ticket on machine login - local user password must be the same as AD password
 # Add to /etc/pam.d/common-auth
 auth    required                        pam_unix.so
 auth    optional                        pam_krb5.so use_first_pass
