@@ -44607,13 +44607,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1651 126 606 469 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-951 675 937 464 -1920 0 1920 1178 </string>
+	<string>969 747 918 401 0 0 1920 1178 </string>
 	<key>NSWindow Frame com.apple.typography_panel_FiraCode-Retina</key>
 	<string>-1574 501 260 176 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>116 916 770 67 0 0 1680 1028 </string>
+	<string>-1920 23 1205 1155 -1920 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1881 23 1882 1155 -1920 0 1920 1178 </string>
+	<string>497 269 825 527 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>331 40 825 527 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
@@ -45411,13 +45411,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-21T13:18:09Z</date>
+	<date>2018-06-27T15:56:20Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
