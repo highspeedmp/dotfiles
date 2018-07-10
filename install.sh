@@ -60,6 +60,11 @@ for i in ${dotfiles[@]}; do
   ln -s ~/dotfiles/.${i} ~/.${i}
 done
 
+# Git config
+
+git config --global user.email "mattprom@gmail.com"
+git config --global user.name "Matthew Promenchenkel"
+
 # Linux desktop specific configuration 
 
 if [ "$is_desktop" = "Y" ]; then
