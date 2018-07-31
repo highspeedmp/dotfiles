@@ -24,6 +24,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 " NERDTree
 " auto load NERDTree
@@ -37,6 +38,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden= 1
 let NERDTreeShowBookmarks = 1
+
+let g:ctrlp_show_hidden = 1
 
 silent! colorscheme onedark
 " python from powerline.vim import setup as powerline_setup
