@@ -20,5 +20,26 @@ Plug 'joshdick/onedark.vim'
 Plug 'rodjek/vim-puppet'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dylanaraps/wal.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
+" NERDTree
+" auto load NERDTree
+" autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if nerdtree is the only window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeShowHidden= 1
+let NERDTreeShowBookmarks = 1
+
 silent! colorscheme onedark
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
+" set laststatus=2
