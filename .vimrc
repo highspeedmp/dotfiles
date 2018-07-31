@@ -8,7 +8,7 @@ set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
 set backspace=2
-
+set updatetime=100
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -26,24 +26,19 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-
 call plug#end()
 " NERDTree
-" auto load NERDTree
-" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
 " Close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden= 1
 let NERDTreeShowBookmarks = 1
-
+"ctrlp
 let g:ctrlp_show_hidden = 1
-
 silent! colorscheme onedark
+" PowerLine
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
 " python del powerline_setup
