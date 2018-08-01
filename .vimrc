@@ -25,8 +25,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-let ifgit = system('git --version')
-if ($ifgit)
+" let ifgit = system('which git')
+if (system('which git'))
   Plug 'airblade/vim-gitgutter'
 endif
 
