@@ -25,7 +25,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-silent! Plug 'airblade/vim-gitgutter'
+let ifgit = system('git --version')
+if ($ifgit)
+  Plug 'airblade/vim-gitgutter'
+endif
+
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
