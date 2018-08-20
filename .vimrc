@@ -14,7 +14,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-call plug#begin('~/.vim/plugged')
+silent! call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'joshdick/onedark.vim'
 Plug 'rodjek/vim-puppet'
@@ -25,8 +25,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'hdima/python-syntax'
+" let ifgit = system('which git')
+if (system('which git'))
+  Plug 'airblade/vim-gitgutter'
+endif
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>

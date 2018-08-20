@@ -15,3 +15,4 @@ alias ls='ls --color=auto'
 alias grep='grep --color=always'
 alias weather="curl -s wttr.in/Ann\ Arbor"
 alias genpass='openssl rand -base64 $1'
+alias sshnokey='ssh -o PubkeyAuthentication=no $1'
