@@ -26,6 +26,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'hdima/python-syntax'
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
