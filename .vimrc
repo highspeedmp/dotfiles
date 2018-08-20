@@ -25,11 +25,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'hdima/python-syntax'
 " let ifgit = system('which git')
 if (system('which git'))
   Plug 'airblade/vim-gitgutter'
 endif
-
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
