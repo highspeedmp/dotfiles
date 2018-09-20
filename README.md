@@ -3,16 +3,16 @@
 ## All Systems
 Pull down the installer file then run it 
 ```
-cd ~ && wget https://gitlab.com/mattprom/dotfiles/raw/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh
+cd ~ && wget https://raw.githubusercontent.com/highspeedmp/dotfiles/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh
 ```
 Fancy version for linux desktops that restarts applications and looks cool
 ```
-cd ~ && wget https://gitlab.com/mattprom/dotfiles/raw/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh && gnome-terminal && exit
+cd ~ && wget https://raw.githubusercontent.com/highspeedmp/dotfiles/master/install.sh && chmod +x install.sh && ./install.sh && rm ./install.sh && gnome-terminal && exit
 ```
 ### git
 Safely transfer your github ssh keys (.ssh/highspeedmp-GitHub) to this new setup, then update the github remote url
 ```
-cd ~/dotfiles && git remote set-url origin git@gitlab.com:mattprom/dotfiles.git
+cd ~/dotfiles && git remote set-url origin git@github.com:highspeedmp/dotfiles.git
 ```
 
 ## Linux 
