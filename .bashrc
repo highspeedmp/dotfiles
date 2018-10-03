@@ -16,3 +16,4 @@ alias grep='grep --color=always'
 alias weather="curl -s wttr.in/Ann\ Arbor"
 alias genpass='openssl rand -base64 $1'
 alias sshnokey='ssh -o PubkeyAuthentication=no $1'
+export BAT_THEME="TwoDark"
