@@ -98,3 +98,4 @@ git clone https://github.com/nojhan/liquidprompt.git
 echo ""
 echo "Some additional configuration is still requried, view the README.md file in the ~/dotfiles directory"
 echo ""
+source ~/.bashrc

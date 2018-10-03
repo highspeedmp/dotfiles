@@ -6,3 +6,7 @@ Host github.com
     User highspeedmp
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/highspeedmp-GitHub
+Host gitlab.com
+    User mattprom
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_gitlab
