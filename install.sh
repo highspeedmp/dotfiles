@@ -26,7 +26,10 @@ dotfiles=(Brewfile inputrc iterm2)
   
   mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc-osx ~/.bashrc
-
+  
+  defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+  defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+  
   if [ -f "$HOME/.Brewfile" ]; then
     echo "Updating homebrew bundle"
     brew bundle --global
