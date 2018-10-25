@@ -12,11 +12,14 @@ if [ "$system_type" = "Darwin" ]; then
   # install homebrew if it's missing
   if ! command -v brew >/dev/null 2>&1; then
     echo "Installing homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # if user is an admin on the box use the recommeneded install which puts brew into /usr/local
+    #sudo /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # if user is not an admin then do this stuff -assume this is the case
+    mkdir ~/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
   fi
-  brew install git
+  ~/hombrew/bin/brew install git
   cd ~
-  git clone https://github.com/highspeedmp/dotfiles.git
+  ~/homebrew/bin/git clone https://github.com/highspeedmp/dotfiles.git
 
 dotfiles=(Brewfile inputrc iterm2)
   for i in ${dotfiles[@]}; do
@@ -29,7 +32,7 @@ dotfiles=(Brewfile inputrc iterm2)
 
   if [ -f "$HOME/.Brewfile" ]; then
     echo "Updating homebrew bundle"
-    brew bundle --global
+    ~/homebrew/bin/brew bundle --global
   fi
 
   if [ -d "$HOME/.iterm2" ]; then
