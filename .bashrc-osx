@@ -1,5 +1,7 @@
 # .bashrc
-
+if [ -f ~/homebrew ]; then
+  PATH=~/homebrew/bin:$PATH
+fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
@@ -15,3 +17,6 @@ EDITOR=vim
 alias grep='grep --color=always'
 alias weather="curl -s wttr.in/Ann\ Arbor"
 alias genpass='openssl rand -base64 $1'
+alias youtube-audio='youtube-dl -i -t --extract-audio --audio-format mp3 --audio-quality 0 $1'
+export BAT_THEME="TwoDark"
+
