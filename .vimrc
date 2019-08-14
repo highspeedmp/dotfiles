@@ -23,7 +23,7 @@ silent! call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'joshdick/onedark.vim'
 Plug 'rodjek/vim-puppet'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'dylanaraps/wal.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
