@@ -1,5 +1,10 @@
+" syntax highlighting 
 syntax on
-set number
+" line number toggle
+set nonumber
+" this disables vim entering visual mode upon mouse selection
+set mouse-=a
+" auto indent
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=2
