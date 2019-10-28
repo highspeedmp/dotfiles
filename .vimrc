@@ -50,8 +50,10 @@ let NERDTreeShowHidden= 1
 let NERDTreeShowBookmarks = 1
 "ctrlp
 let g:ctrlp_show_hidden = 1
-"silent! colorscheme onedark
-silent! colorscheme gruvbox
+silent! colorscheme onedark
+"silent! colorscheme gruvbox
+"let g:gruvbox_contrast_dark= "soft"
+"set bg=dark
 " PowerLine
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
