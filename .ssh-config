@@ -1,6 +1,7 @@
 Host *
     ServerAliveInterval 60
     ServerAliveCountMax 5
+    PreferredAuthentications publickey
 Host github.com
     HostName github.com
     User highspeedmp
