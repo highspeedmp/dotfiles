@@ -8,7 +8,7 @@ fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i*  ]] && source ~/liquidprompt/liquidprompt
 
-EDITOR=vim
+export EDITOR='vim'
 
 # Colors
 alias ls='ls --color=auto'
