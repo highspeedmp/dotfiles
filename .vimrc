@@ -2,6 +2,9 @@
 syntax on
 " line number toggle
 set nonumber
+" set paste mode with a toggle
+set pastetoggle=<F2>
+
 " this disables vim entering visual mode upon mouse selection
 set mouse-=a
 " auto indent
@@ -32,9 +35,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'hdima/python-syntax'
 " let ifgit = system('which git')
-if (system('which git'))
-  Plug 'airblade/vim-gitgutter'
-endif
+" if (system('which git'))
+"   Plug 'airblade/vim-gitgutter'
+" endif
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
