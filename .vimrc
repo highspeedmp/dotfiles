@@ -1,4 +1,4 @@
-" syntax highlighting 
+" syntax highlighting
 syntax on
 " line number toggle
 set nonumber
