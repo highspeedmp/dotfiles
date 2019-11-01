@@ -3,7 +3,8 @@ if [ -f ~/homebrew ]; then
   PATH=~/homebrew/bin:$PATH
 fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
+#[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -19,4 +20,12 @@ alias weather="curl -s wttr.in/Ann\ Arbor"
 alias genpass='openssl rand -base64 $1'
 alias youtube-audio='youtube-dl -i -t --extract-audio --audio-format mp3 --audio-quality 0 $1'
 export BAT_THEME="TwoDark"
-
+function ip () {
+  echo ""
+  echo "IPv4 Address:" `curl -s 4.ipquail.com/ip`
+  echo "IPv4 PTR:" `curl -s 4.ipquail.com/ptr`
+  echo ""
+  echo "IPv6 Address:" `curl -s 6.ipquail.com/ip`
+  echo "IPv6 PTR:" `curl -s 6.ipquail.com/ptr`
+  echo ""
+}
