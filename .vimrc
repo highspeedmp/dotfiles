@@ -1,7 +1,10 @@
-" syntax highlighting 
+" syntax highlighting
 syntax on
 " line number toggle
 set nonumber
+" set paste mode with a toggle
+set pastetoggle=<F2>
+
 " this disables vim entering visual mode upon mouse selection
 set mouse-=a
 " auto indent
@@ -33,9 +36,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'hdima/python-syntax'
 Plug 'morhetz/gruvbox'
 " let ifgit = system('which git')
-if (system('which git'))
-  Plug 'airblade/vim-gitgutter'
-endif
+" if (system('which git'))
+"   Plug 'airblade/vim-gitgutter'
+" endif
 call plug#end()
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -47,8 +50,10 @@ let NERDTreeShowHidden= 1
 let NERDTreeShowBookmarks = 1
 "ctrlp
 let g:ctrlp_show_hidden = 1
-"silent! colorscheme onedark
-silent! colorscheme gruvbox
+silent! colorscheme onedark
+"silent! colorscheme gruvbox
+"let g:gruvbox_contrast_dark= "soft"
+"set bg=dark
 " PowerLine
 " python from powerline.vim import setup as powerline_setup
 " python powerline_setup()
