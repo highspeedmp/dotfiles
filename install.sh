@@ -46,7 +46,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt install -y git curl vim tmux
+  sudo apt update && apt install -y git curl vim tmux
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
