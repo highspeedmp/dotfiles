@@ -9,7 +9,7 @@ fi
 [[ $- = *i*  ]] && source ~/liquidprompt/liquidprompt
 
 export EDITOR='vim'
-
+export PRINTER="printer-bw"
 # Colors
 alias ls='ls --color=auto'
 alias grep='grep --color=always'
@@ -19,3 +19,6 @@ alias sshnokey='ssh -o PubkeyAuthentication=no $1'
 export BAT_THEME="TwoDark"
 # Here's a yaml linter, I couldn't get it to work as an alias though
 # /usr/bin/ruby -ryaml -e "p YAML.load(STDIN.read)" < hieradata/it-login01.yaml.old
+
+# List the 256 Terminal Colours
+# for COLOR in {1..255}; do echo -en "\e[38;5;${COLOR}m${COLOR}"; done; echo;
