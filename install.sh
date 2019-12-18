@@ -74,21 +74,24 @@ git config --global user.name "Matthew Promenchenkel"
 # Linux desktop specific configuration 
 
 if [ "$is_desktop" = "Y" ]; then
-  sudo apt -y install python3-pip gconf2 fonts-firacode gnome-tweaks
-  sudo pip3 install pywal
+  #sudo apt -y install python3-pip gconf2 fonts-firacode gnome-tweaks
+  sudo apt -y install fonts-firacode
+  #sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
   ln -s ~/dotfiles/.bashrc-linux-desktop ~/.bashrc
   
   mv ~/.vimrc $dot_backup/.vimrc
   ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
 
-  chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
-  cd ~ && wget https://github.com/themix-project/oomox/releases/download/1.6.0/oomox_1.6.0.deb
-  cd ~ && sudo dpkg -i oomox_1.6.0.deb
-  sudo apt -y install -f 
-  wal -g -i ~/dotfiles/desktop.jpg
-  gsettings reset org.gnome.desktop.interface gtk-theme
-  gsettings set org.gnome.desktop.interface gtk-theme wal
+  #chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
+  cd ~ && git clone https://github.com/morhetz/gruvbox-contrib.git && cd ~/gruvbox-contrib/xfce4-terminal && mkdir -p ~/.local/share/xfce4/terminal/colorschemes && cp *.theme ~/.local/share/xfce4/terminal/colorschemes/
+
+  #cd ~ && wget https://github.com/themix-project/oomox/releases/download/1.6.0/oomox_1.6.0.deb
+  #cd ~ && sudo dpkg -i oomox_1.6.0.deb
+  #sudo apt -y install -f 
+  #wal -g -i ~/dotfiles/desktop.jpg
+  #gsettings reset org.gnome.desktop.interface gtk-theme
+  #gsettings set org.gnome.desktop.interface gtk-theme wal
 fi
 # vim-plug
 mkdir ~/.vim
