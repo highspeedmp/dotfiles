@@ -46,7 +46,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt update && apt install -y git curl vim tmux
+  sudo apt update && sudo apt install -y git curl vim tmux
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
@@ -78,7 +78,7 @@ if [ "$is_desktop" = "Y" ]; then
   sudo apt -y install fonts-firacode
   #sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
-  ln -s ~/dotfiles/.bashrc-linux-desktop ~/.bashrc
+  ln -s ~/dotfiles/.bashrc ~/.bashrc
   
   mv ~/.vimrc $dot_backup/.vimrc
   ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
