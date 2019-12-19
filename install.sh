@@ -81,7 +81,7 @@ if [ "$is_desktop" = "Y" ]; then
   ln -s ~/dotfiles/.bashrc ~/.bashrc
   
   mv ~/.vimrc $dot_backup/.vimrc
-  ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
+  ln -s ~/dotfiles/.vimrc ~/.vimrc
 
   #chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
   cd ~ && git clone https://github.com/morhetz/gruvbox-contrib.git && cd ~/gruvbox-contrib/xfce4-terminal && mkdir -p ~/.local/share/xfce4/terminal/colorschemes && cp *.theme ~/.local/share/xfce4/terminal/colorschemes/
@@ -103,7 +103,7 @@ if command -v vim >/dev/null 2>&1; then
 fi
 
 # liquid prompt
-git clone https://github.com/nojhan/liquidprompt.git
+cd && git clone https://github.com/nojhan/liquidprompt.git
 echo ""
 echo "Some additional configuration is still requried, view the README.md file in the ~/dotfiles directory"
 echo ""
