@@ -46,7 +46,7 @@ dotfiles=(Brewfile inputrc iterm2)
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  sudo apt update && apt install -y git curl vim tmux
+  sudo apt update && sudo apt install -y git curl vim tmux
   cd ~
   git clone https://github.com/highspeedmp/dotfiles.git
   
@@ -78,10 +78,10 @@ if [ "$is_desktop" = "Y" ]; then
   sudo apt -y install fonts-firacode
   #sudo pip3 install pywal
   mv ~/.bashrc $dot_backup/.bashrc
-  ln -s ~/dotfiles/.bashrc-linux-desktop ~/.bashrc
+  ln -s ~/dotfiles/.bashrc ~/.bashrc
   
   mv ~/.vimrc $dot_backup/.vimrc
-  ln -s ~/dotfiles/.vimrc-linux-desktop ~/.vimrc
+  ln -s ~/dotfiles/.vimrc ~/.vimrc
 
   #chmod a+x ~/dotfiles/one-dark.sh && ~/dotfiles/one-dark.sh
   cd ~ && git clone https://github.com/morhetz/gruvbox-contrib.git && cd ~/gruvbox-contrib/xfce4-terminal && mkdir -p ~/.local/share/xfce4/terminal/colorschemes && cp *.theme ~/.local/share/xfce4/terminal/colorschemes/
@@ -103,7 +103,7 @@ if command -v vim >/dev/null 2>&1; then
 fi
 
 # liquid prompt
-git clone https://github.com/nojhan/liquidprompt.git
+cd && git clone https://github.com/nojhan/liquidprompt.git
 echo ""
 echo "Some additional configuration is still requried, view the README.md file in the ~/dotfiles directory"
 echo ""
