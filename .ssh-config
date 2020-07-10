@@ -11,3 +11,8 @@ Host gitlab.com
     User mattprom
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
+Host stash.merit.edu
+    HostName stash.merit.edu
+    User mpromenc
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_stash
