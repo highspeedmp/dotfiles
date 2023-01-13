@@ -14,7 +14,8 @@ export PRINTER="printer-bw"
 alias ls='ls --color=auto'
 alias grep='grep --color=always'
 alias weather="curl -s wttr.in/Ann\ Arbor"
-alias genpass='openssl rand -base64 $1'
+alias genpass="openssl rand -base64 $1"
+alias tmuxnew="tmux new-session -d -s main && tmux rename-window login && tmux new-window -d -n puppet && tmux a"
 alias sshnokey='ssh -o PubkeyAuthentication=no $1'
 export BAT_THEME="TwoDark"
 # Here's a yaml linter, I couldn't get it to work as an alias though

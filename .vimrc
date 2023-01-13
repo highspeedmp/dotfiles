@@ -4,6 +4,7 @@ syntax on
 set nonumber
 " set paste mode with a toggle
 set pastetoggle=<F2>
+set splitright
 
 " this disables vim entering visual mode upon mouse selection
 set mouse-=a
