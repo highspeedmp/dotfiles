@@ -29,3 +29,4 @@ function ip () {
   echo "IPv6 PTR:" `curl -s 6.ipquail.com/ptr`
   echo ""
 }
+alias sshnokey='ssh -o PubkeyAuthentication=no $1'

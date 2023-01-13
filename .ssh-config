@@ -25,6 +25,3 @@ Host gitlab.com
     User mattprom
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
-Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 5

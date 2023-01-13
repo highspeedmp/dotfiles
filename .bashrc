@@ -18,6 +18,15 @@ alias genpass="openssl rand -base64 $1"
 alias tmuxnew="tmux new-session -d -s main && tmux rename-window login && tmux new-window -d -n puppet && tmux a"
 alias sshnokey='ssh -o PubkeyAuthentication=no $1'
 export BAT_THEME="TwoDark"
+function ip () {
+  echo ""
+  echo "IPv4 Address:" `curl -s 4.ipquail.com/ip`
+  echo "IPv4 PTR:" `curl -s 4.ipquail.com/ptr`
+  echo ""
+  echo "IPv6 Address:" `curl -s 6.ipquail.com/ip`
+  echo "IPv6 PTR:" `curl -s 6.ipquail.com/ptr`
+  echo ""
+}
 # Here's a yaml linter, I couldn't get it to work as an alias though
 # /usr/bin/ruby -ryaml -e "p YAML.load(STDIN.read)" < hieradata/it-login01.yaml.old
 
