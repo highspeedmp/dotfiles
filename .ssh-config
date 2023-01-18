@@ -1,3 +1,7 @@
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+    PreferredAuthentications publickey
 Host *arbor.net
     PreferredAuthentications password
     ServerAliveInterval 60
