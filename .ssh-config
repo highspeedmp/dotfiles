@@ -1,11 +1,28 @@
-Host *
+Host idk
+    KexAlgorithms +diffie-hellman-group1-sha1
     ServerAliveInterval 60
     ServerAliveCountMax 5
     PreferredAuthentications publickey
-Host *arbor.net
+Host sfdc-fw0*
     PreferredAuthentications password
     ServerAliveInterval 60
     ServerAliveCountMax 5
+Host grdc-zenoss01
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host sfdc-adva-prod01
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+host 192.203.195.196
+    preferredauthentications password
+    serveraliveinterval 60
+    serveralivecountmax 5
+host *arbor.net
+    preferredauthentications password
+    serveraliveinterval 60
+    serveralivecountmax 5
 Host aaof-s*
     User itops
     PreferredAuthentications password
@@ -29,3 +46,7 @@ Host gitlab.com
     User mattprom
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+    PreferredAuthentications publickey
