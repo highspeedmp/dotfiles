@@ -1,11 +1,44 @@
+Host 207.75.119.202
+ #   PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host nmon-aa.mich.net
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host nmon-emu.mich.net
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host sfdc-fw0*
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host grdc-zenoss01
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+Host sfdc-adva-prod01
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+host 192.203.195.196
+    preferredauthentications password
+    serveraliveinterval 60
+    serveralivecountmax 5
+Host aaof-s*
+    User itops
+    PreferredAuthentications password
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
 Host *
     ServerAliveInterval 60
     ServerAliveCountMax 5
     PreferredAuthentications publickey
-Host *arbor.net
-    PreferredAuthentications password
-    ServerAliveInterval 60
-    ServerAliveCountMax 5
+host *arbor.net
+    preferredauthentications password
+    serveraliveinterval 60
+    serveralivecountmax 5
 Host aaof-s*
     User itops
     PreferredAuthentications password
