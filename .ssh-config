@@ -10,6 +10,11 @@ Host nmon-emu.mich.net
     PreferredAuthentications password
     ServerAliveInterval 60
     ServerAliveCountMax 5
+Host idk
+    KexAlgorithms +diffie-hellman-group1-sha1
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+    PreferredAuthentications publickey
 Host sfdc-fw0*
     PreferredAuthentications password
     ServerAliveInterval 60
@@ -31,19 +36,10 @@ Host aaof-s*
     PreferredAuthentications password
     ServerAliveInterval 60
     ServerAliveCountMax 5
-Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 5
-    PreferredAuthentications publickey
 host *arbor.net
     preferredauthentications password
     serveraliveinterval 60
     serveralivecountmax 5
-Host aaof-s*
-    User itops
-    PreferredAuthentications password
-    ServerAliveInterval 60
-    ServerAliveCountMax 5
 Host grdc-zenoss*
     PreferredAuthentications password
     ServerAliveInterval 60
@@ -62,3 +58,7 @@ Host gitlab.com
     User mattprom
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_gitlab
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 5
+    PreferredAuthentications publickey
