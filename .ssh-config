@@ -40,10 +40,6 @@ host *arbor.net
     preferredauthentications password
     serveraliveinterval 60
     serveralivecountmax 5
-Host grdc-zenoss*
-    PreferredAuthentications password
-    ServerAliveInterval 60
-    ServerAliveCountMax 5
 Host stash.merit.edu
     HostName stash.merit.edu
     User mpromenc
